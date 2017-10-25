@@ -2,7 +2,7 @@
 /*
 Plugin Name: cf7geogle
 Plugin URI: (プラグインの説明と更新を示すページの URI)
-Description: (プラグインの短い説明)
+Description: Google Map plugin for Contact Form 7
 Version: (プラグインのバージョン番号。例: 1.0)
 Author: (プラグイン作者の名前)
 Author URI: (プラグイン作者の URI)
