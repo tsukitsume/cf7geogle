@@ -1,24 +1,22 @@
 <?php
-$cf7geogle_descriptions='<br><span class="description" style="font-size:90%;">下記ボタンより入力するフィールドの名前を選択するか、css のセレクタの形でで入力してください(※スペースは入寮しないでください)</span>
+$cf7geogle_descriptions='<br><span class="description" style="font-size:90%;">'.__('Please select the name of the field to enter from the button below or enter in the form of selector of css (* Please do not enter a space)', 'cf7geogle').'</span>
 			<div class="cf7geogle exist_fields"></div>';
 ?>
 
 <div class="control-box cf7geogle">
 
 <fieldset>
-<legend>郵便番号から住所を検索するボタンを作成します。対象の郵便番号フィールドと、住所を入力するフィールドを登録してください</legend>
+<legend><?php _e('Generate button to search address from zip code. Please enter the field to be searched and the field for entering zip code', 'cf7geogle') ?></legend>
 
 <table class="form-table">
 <tbody>
 	<tr>
-	<th scope="row"><label for="tag-generator-panel-text-name">名前</label></th>
+	<th scope="row"><label for="tag-generator-panel-text-name"><?php _e('Name', 'cf7geogle') ?></label></th>
 	<td><input type="text" name="name" class="tg-name oneline" id="tag-generator-panel-text-name"></td>
 	</tr>
 
-
-
 	<tr>
-		<th scope="row"><label for="tag-generator-panel-text-name">郵便番号検索フィールド</label></th>
+		<th scope="row"><label for="tag-generator-panel-text-name"><?php _e('Field name of zip code', 'cf7geogle') ?></label></th>
 		<td>
 			<input type="text" name="zip" class="oneline option" id="">
 			<?php echo $cf7geogle_descriptions; ?>
@@ -26,7 +24,7 @@ $cf7geogle_descriptions='<br><span class="description" style="font-size:90%;">�
 	</tr>
 
 	<tr>
-		<th scope="row"><label for="tag-generator-panel-text-name">都道府県フィールド</label></th>
+		<th scope="row"><label for="tag-generator-panel-text-name"><?php _e('Field name of prefecture', 'cf7geogle') ?></label></th>
 		<td>
 			<input type="text" name="pref" class="oneline option" id="">
 			<?php echo $cf7geogle_descriptions; ?>
@@ -34,7 +32,7 @@ $cf7geogle_descriptions='<br><span class="description" style="font-size:90%;">�
 	</tr>
 
 	<tr>
-		<th scope="row"><label for="tag-generator-panel-text-name">市区町村フィールド</label></th>
+		<th scope="row"><label for="tag-generator-panel-text-name"><?php _e('Field name of city', 'cf7geogle') ?></label></th>
 		<td>
 			<input type="text" name="city" class="oneline option" id="">
 
@@ -43,7 +41,7 @@ $cf7geogle_descriptions='<br><span class="description" style="font-size:90%;">�
 	</tr>
 
 	<tr>
-		<th scope="row"><label for="tag-generator-panel-text-name">住所入力フィールド</label></th>
+		<th scope="row"><label for="tag-generator-panel-text-name"><?php _e('Field name of address', 'cf7geogle') ?></label></th>
 		<td>
 			<input type="text" name="addr" class="oneline option" id="">
 			<?php echo $cf7geogle_descriptions; ?>
@@ -51,19 +49,19 @@ $cf7geogle_descriptions='<br><span class="description" style="font-size:90%;">�
 	</tr>
 
 	<tr>
-		<th scope="row"><label for="tag-generator-panel-text-name">ボタンのラベル</label></th>
+		<th scope="row"><label for="tag-generator-panel-text-name"><?php _e('Label text', 'cf7geogle') ?></label></th>
 		<td>
 			<input type="text" name="label" class="oneline option">
 		</td>
 	</tr>
 
 	<tr>
-	<th scope="row"><label for="tag-generator-panel-text-id">ID 属性</label></th>
+	<th scope="row"><label for="tag-generator-panel-text-id">ID</label></th>
 	<td><input type="text" name="id" class="idvalue oneline option" id="tag-generator-panel-text-id"></td>
 	</tr>
 
 	<tr>
-	<th scope="row"><label for="tag-generator-panel-text-class">クラス属性</label></th>
+	<th scope="row"><label for="tag-generator-panel-text-class">Class</label></th>
 	<td><input type="text" name="class" class="classvalue oneline option" id="tag-generator-panel-text-class"></td>
 	</tr>
 

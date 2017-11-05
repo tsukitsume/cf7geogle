@@ -1,22 +1,22 @@
 <?php
-$cf7geogle_descriptions='<br><span class="description" style="font-size:90%;">下記ボタンより入力するフィールドの名前を選択するか、css のセレクタの形でで入力してください(※スペースは入寮しないでください)</span>
+$cf7geogle_descriptions='<br><span class="description" style="font-size:90%;">'.__('Please select the name of the field to enter from the button below or enter in the form of selector of css (* Please do not enter a space)', 'cf7geogle').'</span>
 			<div class="cf7geogle exist_fields"></div>';
 ?>
 
 <div class="control-box cf7geogle">
 
 <fieldset>
-<legend>GoogleMap をフォームに追加します</legend>
+<legend><?php _e('add Google Map to the form', 'cf7geogle') ?></legend>
 
 <table class="form-table">
 <tbody>
 	<tr>
-	<th scope="row"><label for="tag-generator-panel-text-name">名前</label></th>
+	<th scope="row"><label for="tag-generator-panel-text-name"><?php _e('Name', 'cf7geogle') ?></label></th>
 	<td><input type="text" name="name" class="tg-name oneline" id="tag-generator-panel-text-name"></td>
 	</tr>
 
 	<tr>
-		<th scope="row"><label for="tag-generator-panel-text-name">緯度を入力するフィールド</label></th>
+		<th scope="row"><label for="tag-generator-panel-text-name"><?php _e('Field of latitude', 'cf7geogle') ?></label></th>
 		<td>
 			<input type="text" name="lat" class="oneline option" id="">
 			<?php echo $cf7geogle_descriptions; ?>
@@ -24,7 +24,7 @@ $cf7geogle_descriptions='<br><span class="description" style="font-size:90%;">�
 	</tr>
 
 	<tr>
-		<th scope="row"><label for="tag-generator-panel-text-name">経度を入力するフィールド</label></th>
+		<th scope="row"><label for="tag-generator-panel-text-name"><?php _e('Field of longitude', 'cf7geogle') ?></label></th>
 		<td>
 			<input type="text" name="lng" class="oneline option" id="">
 			<?php echo $cf7geogle_descriptions; ?>
@@ -32,7 +32,7 @@ $cf7geogle_descriptions='<br><span class="description" style="font-size:90%;">�
 	</tr>
 
 	<tr>
-		<th scope="row"><label for="tag-generator-panel-text-name">拡大縮小率を入力するフィールド</label></th>
+		<th scope="row"><label for="tag-generator-panel-text-name"><?php _e('Field of zoom', 'cf7geogle') ?></label></th>
 		<td>
 			<input type="text" name="zoom" class="oneline option" id="">
 			<?php echo $cf7geogle_descriptions; ?>
@@ -41,45 +41,40 @@ $cf7geogle_descriptions='<br><span class="description" style="font-size:90%;">�
 
 
 	<tr>
-		<th scope="row"><label for="tag-generator-panel-text-name">表示する地図の高さ(ピクセル)</label></th>
+		<th scope="row"><label for="tag-generator-panel-text-name"><?php _e('Height of Map (px)', 'cf7geogle') ?></label></th>
 		<td>
 			<input type="text" name="height" class="oneline option" id="">
 		</td>
 	</tr>
 
 	<tr>
-		<th scope="row"><label for="tag-generator-panel-text-name">デフォルト値：緯度</label></th>
+		<th scope="row"><label for="tag-generator-panel-text-name"><?php _e('Default latitude', 'cf7geogle') ?></label></th>
 		<td>
 			<input type="text" name="default_lat" class="oneline option" id="">
 		</td>
 	</tr>
 
 	<tr>
-		<th scope="row"><label for="tag-generator-panel-text-name">デフォルト値：経度</label></th>
+		<th scope="row"><label for="tag-generator-panel-text-name"><?php _e('Default longitude', 'cf7geogle') ?></label></th>
 		<td>
 			<input type="text" name="default_lng" class="oneline option" id="">
 		</td>
 	</tr>
 
 	<tr>
-		<th scope="row"><label for="tag-generator-panel-text-name">デフォルト値：拡大縮小率</label></th>
+		<th scope="row"><label for="tag-generator-panel-text-name"><?php _e('Default zoom', 'cf7geogle') ?></label></th>
 		<td>
 			<input type="text" name="default_zoom" class="oneline option" id="">
 		</td>
 	</tr>
 
-
-
-
-
-
 	<tr>
-	<th scope="row"><label for="tag-generator-panel-text-id">ID 属性</label></th>
+	<th scope="row"><label for="tag-generator-panel-text-id">ID</label></th>
 	<td><input type="text" name="id" class="idvalue oneline option" id="tag-generator-panel-text-id"></td>
 	</tr>
 
 	<tr>
-	<th scope="row"><label for="tag-generator-panel-text-class">クラス属性</label></th>
+	<th scope="row"><label for="tag-generator-panel-text-class">class</label></th>
 	<td><input type="text" name="class" class="classvalue oneline option" id="tag-generator-panel-text-class"></td>
 	</tr>
 
@@ -88,9 +83,6 @@ $cf7geogle_descriptions='<br><span class="description" style="font-size:90%;">�
 </fieldset>
 
 </div>
-
-
-
 
 <div class="insert-box">
   <input type="hidden" name="values" value="" />
