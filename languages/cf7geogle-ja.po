@@ -81,3 +81,6 @@ msgstr "市区町村の検索フィールド"
 
 msgid "Field name of address"
 msgstr "住所入力の検索フィールド"
+
+msgid "Generate button to search address from zip code. Please enter the field to be searched and the field for entering zip code"
+msgstr "郵便番号から住所を検索するボタンを作成します。対象の郵便番号フィールドと、住所を入力するフィールドを登録してください"

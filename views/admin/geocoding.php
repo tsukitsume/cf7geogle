@@ -3,7 +3,6 @@ $cf7geogle_descriptions='<br><span class="description" style="font-size:90%;">'.
 			<div class="cf7geogle exist_fields"></div>';
 ?>
 
-
 <div class="control-box cf7geogle">
 
 <fieldset>
