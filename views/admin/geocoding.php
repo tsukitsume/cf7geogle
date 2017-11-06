@@ -6,7 +6,7 @@ $cf7geogle_descriptions='<br><span class="description" style="font-size:90%;">'.
 <div class="control-box cf7geogle">
 
 <fieldset>
-<legend><?php _e('Generate button to search latitude and longitude from address. Please enter the field to be searched and the field for entering latitude and longitude', 'cf7geogle') ?></legend>
+<legend><?php _e('Generate button to search latitude and longitude from address. Please enter the field to be searched and the field for entering latitude and longitude. if not splited address field, enter only the search field.', 'cf7geogle') ?></legend>
 
 <table class="form-table">
 <tbody>
@@ -16,7 +16,7 @@ $cf7geogle_descriptions='<br><span class="description" style="font-size:90%;">'.
 	</tr>
 
 	<tr>
-		<th scope="row"><label for="tag-generator-panel-text-name"><?php _e('Label text', 'cf7geogle') ?></label></th>
+		<th scope="row"><label for="tag-generator-panel-text-name"><?php _e('Label text (ex: search from address)', 'cf7geogle') ?></label></th>
 		<td>
 			<input type="text" name="label" class="oneline option">
 		</td>

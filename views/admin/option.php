@@ -25,4 +25,11 @@
 
 </form>
 
+<h2>Tips</h2>
+
+<ul>
+	<li><?php _e('You may use hidden field as lat, lng and zoom fields.', 'cf7geogle'); ?></li>
+	<li><?php _e('when send lat, lng and zoom, you may use link text like this: https://www.google.co.jp/maps/place/@[lat],[lng],[zoom]/', 'cf7geogle'); ?></li>
+</ul>
+
 </div>

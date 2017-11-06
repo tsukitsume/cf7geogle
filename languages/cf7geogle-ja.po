@@ -34,8 +34,8 @@ msgstr "読み込まない"
 msgid "not Load"
 msgstr "読み込む"
 
-msgid "add Google Map to the form"
-msgstr "Google Map をフォームに追加します"
+msgid "add Google Map to the form. you must fill all fields except for ID and class."
+msgstr "Google Map をフォームに追加します。IDとclass以外入力必須です。"
 
 msgid "Please select the name of the field to enter from the button below or enter in the form of selector of css (* Please do not enter a space)"
 msgstr "下記ボタンより入力するフィールドの名前を選択するか、css のセレクタの形で入力してください(※スペースは入力しないでください)"
@@ -64,23 +64,32 @@ msgstr "デフォルト値：経度"
 msgid "Default zoom"
 msgstr "デフォルト値：拡大縮小率"
 
-msgid "Generate button to search latitude and longitude from address. Please enter the field to be searched and the field for entering latitude and longitude"
-msgstr "住所から緯度経度を検索するボタンを作成します。検索対象のフィールドと、緯度及び経度を入力するフィールドを登録してください"
+msgid "Generate button to search latitude and longitude from address. Please enter the field to be searched and the field for entering latitude and longitude. if not splited address field, enter only the search field."
+msgstr "住所から緯度経度を検索するボタンを作成します。検索対象のフィールドと、緯度及び経度を入力するフィールドを登録してください。入力欄が分かれていない場合は、検索対象のフィールドのみを選択してください。"
 
-msgid "Label text"
-msgstr "ボタンのラベル"
+msgid "Label text (ex: search from zip code)"
+msgstr "ボタンのラベル（例：郵便番号から住所を取得）"
+
+msgid "Label text (ex: search from address)"
+msgstr "ボタンのラベル（例：住所から緯度経度を取得）"
 
 msgid "Field name of zip code"
-msgstr "郵便番号の検索フィールド"
+msgstr "郵便番号のフィールド"
 
 msgid "Field name of prefecture"
-msgstr "都道府県の検索フィールド"
+msgstr "都道府県のフィールド"
 
 msgid "Field name of city"
-msgstr "市区町村の検索フィールド"
+msgstr "市区町村のフィールド"
 
 msgid "Field name of address"
-msgstr "住所入力の検索フィールド"
+msgstr "住所入力のフィールド"
 
-msgid "Generate button to search address from zip code. Please enter the field to be searched and the field for entering zip code"
-msgstr "郵便番号から住所を検索するボタンを作成します。対象の郵便番号フィールドと、住所を入力するフィールドを登録してください"
+msgid "Generate button to search address from zip code. Please enter the field to be searched and the field for entering zip code. if address field is same, enter same fields."
+msgstr "郵便番号から住所を検索するボタンを作成します。対象の郵便番号フィールドと、住所を入力するフィールドを登録してください。住所を入力するフィールドが一つの場合は、すべて同じフィールド名にしてください。"
+
+msgid "You may use hidden field as lat, lng and zoom fields."
+msgstr "緯度、経度、表示倍率はhiddenを用いても良いです。"
+
+msgid "when send lat, lng and zoom, you may use link text like this: https://www.google.co.jp/maps/place/@[lat],[lng],[zoom]/"
+msgstr "緯度、経度、表示倍率をメールで送る場合は、https://www.google.co.jp/maps/place/@[lat],[lng],[zoom]/ というような形式を使っても良いです。"

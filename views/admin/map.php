@@ -6,7 +6,7 @@ $cf7geogle_descriptions='<br><span class="description" style="font-size:90%;">'.
 <div class="control-box cf7geogle">
 
 <fieldset>
-<legend><?php _e('add Google Map to the form', 'cf7geogle') ?></legend>
+<legend><?php _e('add Google Map to the form. you must fill all fields except for ID and class.', 'cf7geogle') ?></legend>
 
 <table class="form-table">
 <tbody>
