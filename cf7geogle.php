@@ -5,7 +5,7 @@ Plugin URI: https://wordpress.org/plugins/cf7geogle/
 Description: Google Map plugin for Contact Form 7
 Text Domain: cf7geogle
 Domain Path: /languages/
-Version: 1.0
+Version: 1.0.0
 Author: konagai[at]jidaikobo.com
 Author URI: http://www.jidaikobo.com
 License: GPL2
@@ -26,13 +26,19 @@ along with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 */
 
-// language
+/**
+ * load language
+ */
 load_plugin_textdomain(
 	'cf7geogle',
 	FALSE,
 	plugin_basename(__DIR__).'/languages'
 );
 
+/**
+ * run_cf7geogle
+ * @return Void
+ */
 function run_cf7geogle()
 {
 	$plugin = new Cf7Geogle();
@@ -40,11 +46,17 @@ function run_cf7geogle()
 }
 run_cf7geogle();
 
-
+/**
+ * Cf7Geogle
+ */
 class Cf7Geogle
 {
 
-	public function  run()
+	/**
+	 * run
+	 * @return Void
+	 */
+	public function run()
 	{
 		add_action( 'wpcf7_admin_init', array($this, 'add_cf7_tag_generator_geogle')  );
 		add_action( 'wpcf7_init',       array($this, 'add_cf7_shortcode_googleMap')  );
@@ -52,6 +64,10 @@ class Cf7Geogle
 		add_action( 'admin_menu',       array($this, 'add_cf7_options')  );
 	}
 
+	/**
+	 * register_settings
+	 * @return Void
+	 */
 	function register_settings()
 	{
 		add_option( 'cf7geogle_option_google_api_key', '');
@@ -62,6 +78,7 @@ class Cf7Geogle
 
 	/**
 	 * option
+	 * @return Void
 	 */
 	public function add_cf7_options()
 	{
@@ -74,13 +91,18 @@ class Cf7Geogle
 		);
 	}
 
+	/**
+	 * options_page
+	 * @return Void
+	 */
 	public function options_page()
 	{
-		include( plugin_dir_path( __FILE__ ) . '/views/admin/option.php'); // 入力ビュー
+		include(plugin_dir_path( __FILE__ ).'/views/admin/option.php');
 	}
 
-	/*
+	/**
 	 * admin
+	 * @return Void
 	 */
 	public function add_cf7_tag_generator_geogle()
 	{
@@ -116,26 +138,45 @@ class Cf7Geogle
 		}
 	}
 
+	/**
+	 * geogle_addresssrc
+	 * @param object $contact_form
+	 * @param string $args
+	 * @return Void
+	 */
 	public function geogle_addresssrc( $contact_form, $args = '' )
 	{
 		$args = wp_parse_args( $args, array() );
 		include(plugin_dir_path( __FILE__ ) . '/views/admin/addresssrc.php'); // 入力ビュー
 	}
 
+	/**
+	 * geogle_map
+	 * @param object $contact_form
+	 * @param string $args
+	 * @return Void
+	 */
 	public function geogle_map( $contact_form, $args = '' )
 	{
 		$args = wp_parse_args( $args, array() );
 		include( plugin_dir_path( __FILE__ ) . '/views/admin/map.php'); // 入力ビュー
 	}
 
+	/**
+	 * geogle_geocoding
+	 * @param object $contact_form
+	 * @param string $args
+	 * @return Void
+	 */
 	public function geogle_geocoding( $contact_form, $args = '' )
 	{
 		$args = wp_parse_args( $args, array() );
 		include( plugin_dir_path( __FILE__ ) . '/views/admin/geocoding.php'); // 入力ビュー
 	}
 
-	/*
+	/**
 	 * public
+	 * @return Void
 	 */
 	public function add_cf7_shortcode_googleMap()
 	{
@@ -162,6 +203,11 @@ class Cf7Geogle
 		}
 	}
 
+	/**
+	 * options_from_tag
+	 * @param Array $tag
+	 * @return array
+	 */
 	protected static function options_from_tag ($tag)
 	{
 		$options = $tag['options'];
@@ -174,7 +220,11 @@ class Cf7Geogle
 		return $options;
 	}
 
-
+	/**
+	 * options_from_tag
+	 * @param Array $tag
+	 * @return string
+	 */
 	public function addresssrc_shortcode_handler( $tag )
 	{
 		$label =  __('Search Address'); // ボタンのラベル
@@ -230,6 +280,11 @@ class Cf7Geogle
 			>';
 	}
 
+	/**
+	 * options_from_tag
+	 * @param Array $tag
+	 * @return string
+	 */
 	public function geocoding_shortcode_handler( $tag )
 	{
 		$label =  __('Search Address'); // ボタンのラベル
@@ -291,7 +346,11 @@ class Cf7Geogle
 			>';
 	}
 
-
+	/**
+	 * options_from_tag
+	 * @param Array $tag
+	 * @return string
+	 */
 	public function googlemap_shortcode_handler( $tag )
 	{
 		$default_lat  = '.default_lat';
