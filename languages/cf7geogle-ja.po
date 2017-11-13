@@ -29,10 +29,10 @@ msgid "Load Google Map Api Key"
 msgstr "Google Map Api Key を読み込む"
 
 msgid "Load"
-msgstr "読み込まない"
+msgstr "読み込む"
 
 msgid "not Load"
-msgstr "読み込む"
+msgstr "読み込まない"
 
 msgid "add Google Map to the form. you must fill all fields except for ID and class."
 msgstr "Google Map をフォームに追加します。IDとclass以外入力必須です。"

@@ -269,15 +269,18 @@ class Cf7Geogle
 			array('API_KEY' => get_option('cf7geogle_option_google_api_key'), // TODO
 		));
 
-		return '<input type="button"
-				value="'.$label.'"
-				data-zip="'.$zip.'"
-				data-pref="'.$pref.'"
-				data-city="'.$city.'"
-				data-addr="'.$addr.'"
-				id="'.$id.'"
-				class="'.$class.'"
-			>';
+
+		$html = '<input type="button"
+			value="'.$label.'"
+			data-zip="'.$zip.'"
+			data-pref="'.$pref.'"
+			data-city="'.$city.'"
+			data-addr="'.$addr.'"
+			class="'.$class.'"';
+		if ($id) $html.= ' id="'.$id.'"'; // id がある時のみ追加
+		$html .= '>';
+
+		return $html;
 	}
 
 	/**
@@ -333,7 +336,7 @@ class Cf7Geogle
 			array('API_KEY' => get_option('dashi_google_map_api_key'),
 		));
 
-		return '<input type="button"
+		$html = '<input type="button"
 				value="'.$label.'"
 				data-zip="'.$zip.'"
 				data-pref="'.$pref.'"
@@ -341,9 +344,11 @@ class Cf7Geogle
 				data-addr="'.$addr.'"
 				data-lat="'.$lat.'"
 				data-lng="'.$lng.'"
-				id="'.$id.'"
-				class="'.$class.'"
-			>';
+				class="'.$class.'"';
+		if ($id) $html .= ' id="'.$id.'" ';
+		$html .= '>';
+
+		return $html;
 	}
 
 	/**
@@ -353,13 +358,13 @@ class Cf7Geogle
 	 */
 	public function googlemap_shortcode_handler( $tag )
 	{
-		$default_lat  = '.default_lat';
-		$default_lng  = '.default_lng';
-		$default_zoom = '.default_zoom';
+		$default_lat  = '0.0';
+		$default_lng  = '0.0';
+		$default_zoom = '12';
 		$lat          = '.lat'; // 結果を入力するフィールド
 		$lng          = '.lng'; // 結果を入力するフィールド
-		$zoom         = 'zoom';
-		$height       = '300p';
+		$zoom         = '.zoom'; // zoom 値を入力するフィールド
+		$height       = '300';
 		$id           = 'cf7geogle-map';
 		$class        = '';
 
@@ -382,6 +387,11 @@ class Cf7Geogle
 				default: break;
 			}
 		}
+
+		if (!is_numeric($default_lat)) $default_lat = 0.0;
+		if (!is_numeric($default_lng)) $default_lng = 0.0;
+		if (!is_numeric($default_zoom)) $default_zoom = 12;
+		if (!is_numeric($height)) $height = 200;
 
 		if (get_option('cf7geogle_option_is_include_api'))
 		{

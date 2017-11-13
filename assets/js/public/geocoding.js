@@ -18,7 +18,7 @@ jQuery(function($)
 		var lng_elm = $(lng);
 
 		var search_value = '';
-		if (zip && $(zip).length > 0)   $(zip).each(function() { search_value += $(this).val(); });
+		if (zip  && $(zip).length  > 0) $(zip).each(function() { search_value += $(this).val(); });
 		if (pref && $(pref).length > 0) $(pref).each(function(){ search_value += $(this).val(); });
 		if (city && $(city).length > 0) $(city).each(function(){ search_value += $(this).val(); });
 		if (addr && $(addr).length > 0) $(addr).each(function(){ search_value += $(this).val(); });
@@ -36,9 +36,13 @@ jQuery(function($)
 		{
 			if (data.status == "OK")
 			{
-				lat_elm.val(data.results[0].geometry.location.lat);
-				lng_elm.val(data.results[0].geometry.location.lng);
-				lat_elm.change();
+				if (lat_elm) lat_elm.val(data.results[0].geometry.location.lat);
+				if (lng_elm) lng_elm.val(data.results[0].geometry.location.lng);
+				if (lat_elm) {
+					lat_elm.change();
+				} else {
+					lng_elm.change();
+				}
 			}
 		});
 	}

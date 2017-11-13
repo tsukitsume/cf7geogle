@@ -14,7 +14,8 @@ var CF7Geogle = {
 				}
 				else if (texts[key].replace(/\s/gi, '').match(/^[A-za-z]/))
 				{
-					selector = 'input[name=' + texts[key].replace(/\s/gi, '') + ']';
+					selector = 'input[name=' + texts[key].replace(/\s/gi, '') + '], '+
+						'textarea[name=' + texts[key].replace(/\s/gi, '') + ']';
 				}
 
 				if (selector)

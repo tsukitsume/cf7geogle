@@ -43,18 +43,25 @@ jQuery(function($)
 			{
 				var components = data.results[0].address_components;
 				console.log(components);
+				console.log(components.length);
 				if (components.length == 5)
 				{
 					pref_elm.val(pref_elm.val() + components[3].long_name);
 					city_elm.val(city_elm.val() + components[2].long_name);
 					addr_elm.val(addr_elm.val() + components[1].long_name);
+					console.log(addr_elm);
 				}
 				else if (components.length == 6)
 				{
 					pref_elm.val(pref_elm.val() + components[4].long_name);
 					city_elm.val(city_elm.val() + components[3].long_name + components[2].long_name);
 					addr_elm.val(addr_elm.val() + components[1].long_name);
+					console.log(addr_elm);
 				}
+			}
+			else if (data.status == "ZERO_RESULTS")
+			{
+				alert('検索結果が 0 件でした');
 			}
 		});
 	}
