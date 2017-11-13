@@ -31,6 +31,10 @@ not yet.
 
 == Changelog ==
 
+= 1.0.1 =
+update language file
+fix id problem
+
 = 1.0.0 =
 first release
 

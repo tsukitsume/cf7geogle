@@ -5,7 +5,7 @@ Plugin URI: https://wordpress.org/plugins/cf7geogle/
 Description: Google Map plugin for Contact Form 7
 Text Domain: cf7geogle
 Domain Path: /languages/
-Version: 1.0.0
+Version: 1.0.1
 Author: konagai[at]jidaikobo.com
 Author URI: http://www.jidaikobo.com
 License: GPL2
